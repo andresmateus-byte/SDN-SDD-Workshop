@@ -1,0 +1,296 @@
+{
+  "name": "Topología 4: red de 13 routers",
+  "description": "Red de 13 routers con corredores alternativos y enlaces transversales. Prueba N01 → N13.",
+  "nodes": [
+    {
+      "id": "N01",
+      "city": "Santa Marta",
+      "lat": 11.2408,
+      "lon": -74.199,
+      "description": "Router N01 de la topología 4; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N02",
+      "city": "Ibagué",
+      "lat": 4.4389,
+      "lon": -75.2322,
+      "description": "Router N02 de la topología 4; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N03",
+      "city": "Neiva",
+      "lat": 2.9273,
+      "lon": -75.2819,
+      "description": "Router N03 de la topología 4; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N04",
+      "city": "Villavicencio",
+      "lat": 4.142,
+      "lon": -73.6266,
+      "description": "Router N04 de la topología 4; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N05",
+      "city": "Montería",
+      "lat": 8.74798,
+      "lon": -75.8814,
+      "description": "Router N05 de la topología 4; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N06",
+      "city": "Armenia",
+      "lat": 4.5339,
+      "lon": -75.6811,
+      "description": "Router N06 de la topología 4; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N07",
+      "city": "Tunja",
+      "lat": 5.5353,
+      "lon": -73.3678,
+      "description": "Router N07 de la topología 4; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N08",
+      "city": "Sincelejo",
+      "lat": 9.3047,
+      "lon": -75.3978,
+      "description": "Router N08 de la topología 4; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N09",
+      "city": "Riohacha",
+      "lat": 11.5444,
+      "lon": -72.9072,
+      "description": "Router N09 de la topología 4; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N10",
+      "city": "Valledupar",
+      "lat": 10.4631,
+      "lon": -73.2532,
+      "description": "Router N10 de la topología 4; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N11",
+      "city": "Bogotá",
+      "lat": 4.711,
+      "lon": -74.0721,
+      "description": "Router N11 de la topología 4; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N12",
+      "city": "Medellín",
+      "lat": 6.2442,
+      "lon": -75.5812,
+      "description": "Router N12 de la topología 4; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N13",
+      "city": "Cali",
+      "lat": 3.4516,
+      "lon": -76.532,
+      "description": "Router N13 de la topología 4; nodo de tránsito y reenvío SDN."
+    }
+  ],
+  "links": [
+    {
+      "node_a": "N01",
+      "node_b": "N02",
+      "delay_ms": 2.0,
+      "bandwidth_mbps": 40.0,
+      "loss_probability": 0.08
+    },
+    {
+      "node_a": "N02",
+      "node_b": "N03",
+      "delay_ms": 2.0,
+      "bandwidth_mbps": 40.0,
+      "loss_probability": 0.08
+    },
+    {
+      "node_a": "N03",
+      "node_b": "N04",
+      "delay_ms": 2.0,
+      "bandwidth_mbps": 40.0,
+      "loss_probability": 0.08
+    },
+    {
+      "node_a": "N04",
+      "node_b": "N13",
+      "delay_ms": 2.0,
+      "bandwidth_mbps": 40.0,
+      "loss_probability": 0.08
+    },
+    {
+      "node_a": "N01",
+      "node_b": "N05",
+      "delay_ms": 12.0,
+      "bandwidth_mbps": 400.0,
+      "loss_probability": 0.025
+    },
+    {
+      "node_a": "N05",
+      "node_b": "N06",
+      "delay_ms": 12.0,
+      "bandwidth_mbps": 400.0,
+      "loss_probability": 0.025
+    },
+    {
+      "node_a": "N06",
+      "node_b": "N07",
+      "delay_ms": 12.0,
+      "bandwidth_mbps": 400.0,
+      "loss_probability": 0.025
+    },
+    {
+      "node_a": "N07",
+      "node_b": "N13",
+      "delay_ms": 12.0,
+      "bandwidth_mbps": 400.0,
+      "loss_probability": 0.025
+    },
+    {
+      "node_a": "N01",
+      "node_b": "N08",
+      "delay_ms": 7.0,
+      "bandwidth_mbps": 80.0,
+      "loss_probability": 0.0005
+    },
+    {
+      "node_a": "N08",
+      "node_b": "N09",
+      "delay_ms": 7.0,
+      "bandwidth_mbps": 80.0,
+      "loss_probability": 0.0005
+    },
+    {
+      "node_a": "N09",
+      "node_b": "N10",
+      "delay_ms": 7.0,
+      "bandwidth_mbps": 80.0,
+      "loss_probability": 0.0005
+    },
+    {
+      "node_a": "N10",
+      "node_b": "N11",
+      "delay_ms": 7.0,
+      "bandwidth_mbps": 80.0,
+      "loss_probability": 0.0005
+    },
+    {
+      "node_a": "N11",
+      "node_b": "N12",
+      "delay_ms": 7.0,
+      "bandwidth_mbps": 80.0,
+      "loss_probability": 0.0005
+    },
+    {
+      "node_a": "N12",
+      "node_b": "N13",
+      "delay_ms": 7.0,
+      "bandwidth_mbps": 80.0,
+      "loss_probability": 0.0005
+    },
+    {
+      "node_a": "N01",
+      "node_b": "N04",
+      "delay_ms": 35,
+      "bandwidth_mbps": 8,
+      "loss_probability": 0.12
+    },
+    {
+      "node_a": "N02",
+      "node_b": "N05",
+      "delay_ms": 38,
+      "bandwidth_mbps": 10,
+      "loss_probability": 0.15
+    },
+    {
+      "node_a": "N03",
+      "node_b": "N06",
+      "delay_ms": 41,
+      "bandwidth_mbps": 12,
+      "loss_probability": 0.18
+    },
+    {
+      "node_a": "N04",
+      "node_b": "N07",
+      "delay_ms": 44,
+      "bandwidth_mbps": 8,
+      "loss_probability": 0.21
+    },
+    {
+      "node_a": "N05",
+      "node_b": "N08",
+      "delay_ms": 47,
+      "bandwidth_mbps": 10,
+      "loss_probability": 0.12
+    },
+    {
+      "node_a": "N06",
+      "node_b": "N09",
+      "delay_ms": 35,
+      "bandwidth_mbps": 12,
+      "loss_probability": 0.15
+    },
+    {
+      "node_a": "N07",
+      "node_b": "N10",
+      "delay_ms": 38,
+      "bandwidth_mbps": 8,
+      "loss_probability": 0.18
+    },
+    {
+      "node_a": "N08",
+      "node_b": "N11",
+      "delay_ms": 41,
+      "bandwidth_mbps": 10,
+      "loss_probability": 0.21
+    },
+    {
+      "node_a": "N09",
+      "node_b": "N12",
+      "delay_ms": 44,
+      "bandwidth_mbps": 12,
+      "loss_probability": 0.12
+    },
+    {
+      "node_a": "N10",
+      "node_b": "N13",
+      "delay_ms": 47,
+      "bandwidth_mbps": 8,
+      "loss_probability": 0.15
+    }
+  ],
+  "recommended_experiment": {
+    "source": "N01",
+    "destination": "N13",
+    "expected_by_metric": {
+      "delay": [
+        "N01",
+        "N02",
+        "N03",
+        "N04",
+        "N13"
+      ],
+      "bandwidth": [
+        "N01",
+        "N05",
+        "N06",
+        "N07",
+        "N13"
+      ],
+      "loss": [
+        "N01",
+        "N08",
+        "N09",
+        "N10",
+        "N11",
+        "N12",
+        "N13"
+      ]
+    }
+  }
+}

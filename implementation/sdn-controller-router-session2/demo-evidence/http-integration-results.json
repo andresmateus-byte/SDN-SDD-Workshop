@@ -1,0 +1,88 @@
+{
+  "checks": [],
+  "controller_health": {
+    "status": "ok",
+    "application": "controller"
+  },
+  "router_health": {
+    "status": "ok",
+    "application": "router"
+  },
+  "initial_route": {
+    "path": [
+      "A",
+      "B",
+      "D"
+    ],
+    "metric": "delay",
+    "total_cost": 20.0,
+    "topology_version": 1
+  },
+  "packet_initial": {
+    "packet_id": "integration-1",
+    "status": "DELIVERED",
+    "path": [
+      "A",
+      "B",
+      "D"
+    ],
+    "trace": [
+      "A",
+      "B",
+      "D"
+    ],
+    "metric": "delay",
+    "total_cost": 20.0,
+    "topology_version": 1
+  },
+  "fail_BD": {
+    "node_a": "B",
+    "node_b": "D",
+    "active": false,
+    "changed": true,
+    "topology_version": 2
+  },
+  "alternate_route": {
+    "path": [
+      "A",
+      "C",
+      "D"
+    ],
+    "metric": "delay",
+    "total_cost": 35.0,
+    "topology_version": 2
+  },
+  "fail_CD": {
+    "node_a": "C",
+    "node_b": "D",
+    "active": false,
+    "changed": true,
+    "topology_version": 3
+  },
+  "no_route": {
+    "status_code": 404,
+    "body": {
+      "error": "PATH_NOT_FOUND",
+      "message": "No existe un camino entre 'A' y 'D' con los enlaces activos."
+    }
+  },
+  "restore_BD": {
+    "node_a": "B",
+    "node_b": "D",
+    "active": true,
+    "changed": true,
+    "topology_version": 4
+  },
+  "restored_route": {
+    "path": [
+      "A",
+      "B",
+      "D"
+    ],
+    "metric": "delay",
+    "total_cost": 20.0,
+    "topology_version": 4
+  },
+  "forwarding_log_lines": 1,
+  "result": "PASS"
+}

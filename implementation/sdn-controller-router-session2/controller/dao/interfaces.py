@@ -1,0 +1,6 @@
+from typing import Protocol
+from controller.domain.models import Topology
+
+class TopologyDAO(Protocol):
+    def get_snapshot(self) -> Topology: ...
+    def change_link(self, node_a: str, node_b: str, active: bool): ...

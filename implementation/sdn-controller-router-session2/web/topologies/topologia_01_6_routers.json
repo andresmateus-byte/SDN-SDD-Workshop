@@ -1,0 +1,142 @@
+{
+  "name": "Topología 1: red de 6 routers",
+  "description": "Red de 6 routers con corredores alternativos y enlaces transversales. Prueba N01 → N06.",
+  "nodes": [
+    {
+      "id": "N01",
+      "city": "Bucaramanga",
+      "lat": 7.1193,
+      "lon": -73.1227,
+      "description": "Router N01 de la topología 1; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N02",
+      "city": "Pasto",
+      "lat": 1.2136,
+      "lon": -77.2811,
+      "description": "Router N02 de la topología 1; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N03",
+      "city": "Cartagena",
+      "lat": 10.391,
+      "lon": -75.4794,
+      "description": "Router N03 de la topología 1; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N04",
+      "city": "Manizales",
+      "lat": 5.0703,
+      "lon": -75.5138,
+      "description": "Router N04 de la topología 1; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N05",
+      "city": "Pereira",
+      "lat": 4.8087,
+      "lon": -75.6906,
+      "description": "Router N05 de la topología 1; nodo de tránsito y reenvío SDN."
+    },
+    {
+      "id": "N06",
+      "city": "Popayán",
+      "lat": 2.4448,
+      "lon": -76.6147,
+      "description": "Router N06 de la topología 1; nodo de tránsito y reenvío SDN."
+    }
+  ],
+  "links": [
+    {
+      "node_a": "N01",
+      "node_b": "N02",
+      "delay_ms": 2.0,
+      "bandwidth_mbps": 40.0,
+      "loss_probability": 0.08
+    },
+    {
+      "node_a": "N02",
+      "node_b": "N06",
+      "delay_ms": 2.0,
+      "bandwidth_mbps": 40.0,
+      "loss_probability": 0.08
+    },
+    {
+      "node_a": "N01",
+      "node_b": "N03",
+      "delay_ms": 12.0,
+      "bandwidth_mbps": 400.0,
+      "loss_probability": 0.025
+    },
+    {
+      "node_a": "N03",
+      "node_b": "N06",
+      "delay_ms": 12.0,
+      "bandwidth_mbps": 400.0,
+      "loss_probability": 0.025
+    },
+    {
+      "node_a": "N01",
+      "node_b": "N04",
+      "delay_ms": 7.0,
+      "bandwidth_mbps": 80.0,
+      "loss_probability": 0.0005
+    },
+    {
+      "node_a": "N04",
+      "node_b": "N05",
+      "delay_ms": 7.0,
+      "bandwidth_mbps": 80.0,
+      "loss_probability": 0.0005
+    },
+    {
+      "node_a": "N05",
+      "node_b": "N06",
+      "delay_ms": 7.0,
+      "bandwidth_mbps": 80.0,
+      "loss_probability": 0.0005
+    },
+    {
+      "node_a": "N02",
+      "node_b": "N04",
+      "delay_ms": 35,
+      "bandwidth_mbps": 8,
+      "loss_probability": 0.12
+    },
+    {
+      "node_a": "N03",
+      "node_b": "N05",
+      "delay_ms": 38,
+      "bandwidth_mbps": 10,
+      "loss_probability": 0.15
+    },
+    {
+      "node_a": "N04",
+      "node_b": "N06",
+      "delay_ms": 41,
+      "bandwidth_mbps": 12,
+      "loss_probability": 0.18
+    }
+  ],
+  "recommended_experiment": {
+    "source": "N01",
+    "destination": "N06",
+    "expected_by_metric": {
+      "delay": [
+        "N01",
+        "N02",
+        "N06"
+      ],
+      "bandwidth": [
+        "N01",
+        "N03",
+        "N06"
+      ],
+      "loss": [
+        "N01",
+        "N04",
+        "N05",
+        "N06"
+      ]
+    }
+  }
+}

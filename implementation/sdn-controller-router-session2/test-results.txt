@@ -1,0 +1,6 @@
+SDN Controller + Router — verificación de entrega
+Fecha: 2026-10-27
+
+$ python -m pytest -q
+..........................                                               [100%]
+26 passed in 0.12s

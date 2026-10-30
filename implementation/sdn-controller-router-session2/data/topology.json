@@ -1,0 +1,9 @@
+{
+  "nodes": ["A", "B", "C", "D"],
+  "links": [
+    {"node_a":"A","node_b":"B","delay_ms":10,"bandwidth_mbps":100,"loss_probability":0.01},
+    {"node_a":"B","node_b":"D","delay_ms":10,"bandwidth_mbps":100,"loss_probability":0.01},
+    {"node_a":"A","node_b":"C","delay_ms":15,"bandwidth_mbps":50,"loss_probability":0.02},
+    {"node_a":"C","node_b":"D","delay_ms":20,"bandwidth_mbps":50,"loss_probability":0.02}
+  ]
+}
