@@ -1,6 +1,3 @@
-# SDN-SDD-Workshop
-Software-Defined Networking (SDN) Controller and Router — Software Design and Development Workshop. Sessions 1 and 2.
-
 # SDN — Taller de Diseño y Desarrollo de Software
 
 ## Descripción general del proyecto
